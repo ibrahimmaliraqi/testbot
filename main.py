@@ -1,5 +1,6 @@
 import telebot
 import gunicorn 
+from test import server 
 import threading 
 from time import sleep 
 bot = telebot.TeleBot('7156177907:AAHaTVyqCyfLap86H3Gcfv8yei6FkrrfRck')
@@ -14,4 +15,5 @@ def yy():
 		bot.send_message(1558155028 ,f'تم التحديث :{a}')
 		sleep(60)
 threading.Thread(target=yy).start()
+server()
 bot.infinity_polling()
